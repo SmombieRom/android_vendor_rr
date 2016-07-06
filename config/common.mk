@@ -85,6 +85,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/ResurrectionStats/ResurrectionStats.apk:system/app/ResurrectionStats/ResurrectionStats.apk
 
+# AICP-Memo
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/aicpmemo/aicpmemo.apk:system/app/aicpmemo/aicpmemo.apk
+
+
 # Backup Tool
 ifneq ($(WITH_GMS),true)
 PRODUCT_COPY_FILES += \
