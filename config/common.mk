@@ -113,6 +113,9 @@ endif
 # CM-specific init file
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/etc/init.local.rc:root/init.cm.rc
+	
+# Include LatinIME dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/cm/overlay/dictionaries	
 
 # Copy over added mimetype supported in libcore.net.MimeUtils
 PRODUCT_COPY_FILES += \
