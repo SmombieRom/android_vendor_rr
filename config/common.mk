@@ -245,6 +245,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 DEVICE_PACKAGE_OVERLAYS += vendor/cm/overlay/common
 
+# Busybox
+PRODUCT_PACKAGES += \
+    Busybox
+
+# Viper4Android
+PRODUCT_COPY_FILES += \
+   vendor/cm/prebuilt/common/bin/audio_policy.sh:system/audio_policy.sh \
+   vendor/cm/prebuilt/common/addon.d/95-LolliViPER.sh:system/addon.d/95-LolliViPER.sh \
+   vendor/cm/prebuilt/common/su.d/50viper.sh:system/su.d/50viper.sh \
+   vendor/cm/prebuilt/common/app/Viper4Android/Viper4Android.apk:system/priv-app/Viper4Android/Viper4Android.apk 
+
+
 PRODUCT_VERSION = 5.7.3
     CM_VERSION := ResurrectionRemix-M-v$(PRODUCT_VERSION)-$(shell date -u +%Y%m%d)-$(CM_BUILD)
 
