@@ -69,6 +69,17 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/cm/CHANGELOG.mkdn:system/etc/RR/Changelog.txt
 
+# Busybox
+PRODUCT_PACKAGES += \
+    Busybox
+
+# Viper4Android
+PRODUCT_COPY_FILES += \
+   vendor/cm/prebuilt/common/bin/audio_policy.sh:system/audio_policy.sh \
+   vendor/cm/prebuilt/common/addon.d/95-LolliViPER.sh:system/addon.d/95-LolliViPER.sh \
+   vendor/cm/prebuilt/common/su.d/50viper.sh:system/su.d/50viper.sh \
+   vendor/cm/prebuilt/common/app/Viper4Android/ViPER4Android.apk:system/priv-app/Viper4Android/ViPER4Android.apk
+
 # Copy features.txt from the path
 PRODUCT_COPY_FILES += \
     vendor/cm/Features.mkdn:system/etc/RR/Features.txt
@@ -247,18 +258,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=1
 
 DEVICE_PACKAGE_OVERLAYS += vendor/cm/overlay/common
-
-# Busybox
-PRODUCT_PACKAGES += \
-    Busybox
-
-# Viper4Android
-PRODUCT_COPY_FILES += \
-   vendor/cm/prebuilt/common/bin/audio_policy.sh:system/audio_policy.sh \
-   vendor/cm/prebuilt/common/addon.d/95-LolliViPER.sh:system/addon.d/95-LolliViPER.sh \
-   vendor/cm/prebuilt/common/su.d/50viper.sh:system/su.d/50viper.sh \
-   vendor/cm/prebuilt/common/app/Viper4Android/Viper4Android.apk:system/priv-app/Viper4Android/Viper4Android.apk 
-
 
 PRODUCT_VERSION = 5.7.3
     CM_VERSION := ResurrectionRemix-M-v$(PRODUCT_VERSION)-$(shell date -u +%Y%m%d)-$(CM_BUILD)
