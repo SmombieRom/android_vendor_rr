@@ -133,6 +133,9 @@ PRODUCT_COPY_FILES += \
 # Theme engine
 include vendor/cm/config/themes_common.mk
 
+# RR Audio Mods
+-include vendor/cm/config/rr_audio_mod.mk
+
 # CMSDK
 include vendor/cm/config/cmsdk_common.mk
 
@@ -158,7 +161,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Launcher3 \
     Trebuchet \
-    AudioFX \
     CMFileManager \
     Eleven \
     LockClock \
